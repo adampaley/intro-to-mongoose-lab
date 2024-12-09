@@ -1,0 +1,34 @@
+Terminal CRM
+    Objective
+        - a Customer Relationship Management (CRM) tool is an application that allows a company to keep track of their customers
+        - in this lab, going to create a terminal-baed CRM application that will have full CRUD functionality on a single-model: Customer
+
+Dependencies
+    Install prompt-sync
+        - prompt-sync is a package that allows us to easily collect input from a user in ther terminal
+        - this is how we will interact with our application
+    
+        > install the package
+            npm i prompt-sync
+        > ensure it is working by adding the following code to app,js and test it using node
+            const prompt = require('prompt-sync')()
+
+            const username = prompt('What is your name? `)
+
+            console.log(`Your name is ${username}1)
+
+        > also need the following packages:
+            * mongoose
+            * dotenv
+
+Define the Model 
+    1. Create a new model file and build the customer schema
+    2. The csotmer model will have the following fields
+        * name: String
+        * age: Number
+
+Make the Database Connection 
+    - initialize Mongoose and MongoDB Connection 
+        1. set up Mongoose in your application
+        2. ensure you have .env file for your MongoDB URI and a .gitignore file to avoide pushing sensitive data to GitHub
+    
