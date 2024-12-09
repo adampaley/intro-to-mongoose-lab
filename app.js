@@ -13,7 +13,8 @@ mongoose.connection.on("connected", () => {
 // Utility functon to exit at any time
 const checkQuit = (param) => {
     if (param.toLowerCase() === "quit") {
-        process.exit()
+        // process.exit()
+        mongoose.connection.close()
     }
 }
 
